@@ -11,11 +11,11 @@ if(isset($_GET['ElevId'])){
     <title>'. getName($_GET['ElevId'],"i","Elev",$mysqli) .'</title>
     </head>
     <body>
-    <div id="back"><a href=""><img src="img.png"></a></div>
+    <div id="back"><a href="list_Elever.php"><img src="img.png"></a></div>
     <div id="block">
         <form action="visaInfo.php" method="GET">
-            <input type="checkbox" name="Forelder"> Förelder <br>
-            <input type="checkbox" name="KontUpp"> Kontakt Uppgifter Förelder<br>
+            <input type="checkbox" name="Forelder"> Förälder <br>
+            <input type="checkbox" name="KontUpp"> Kontakt Uppgifter Förälder<br>
             <input type="checkbox" name="Omdomme"> Omdömme<br><br>
             <input type="hidden" name="ElevId" checked value="'. $_GET['ElevId'] .'"> 
             <input type="SUBMIT" value="Valt">

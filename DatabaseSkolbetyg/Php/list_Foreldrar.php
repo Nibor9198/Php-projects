@@ -18,7 +18,7 @@ if($mysqli = connect_db()){
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>Föreldrar</title>
+    <title>Föräldrar</title>
 </head>
 <body>
 <div id="back"><a href="index.php"><img src="img.png"></a></div>
@@ -27,7 +27,7 @@ if($mysqli = connect_db()){
     <table border='solid'>
 
         <?php
-        echo '<h2>Föreldrar</h2>';
+        echo '<h2>Föräldrar</h2>';
         while($row = $result->fetch_array()) {
             echo "
                     <tr>

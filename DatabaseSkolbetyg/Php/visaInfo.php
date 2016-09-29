@@ -10,7 +10,7 @@ echo '
     <title>' . $_GET['ElevId'] . '</title>
 </head>
 <body>
-<div id="back"><a href=""><img src="img.png"></a></div>
+<div id="back"><a href="list_Elever.php"><img src="img.png"></a></div>
 <div id="block">';
 
 
@@ -25,27 +25,24 @@ if (isset ($_GET['ElevId'])){
     if (isset($_GET['Forelder'])) {
 
         if($mysqli = connect_db()){
-                if($stmt = $mysqli->prepare('SELECT Namn,Efternamn from Forelder where ID=(SELECT idForelder from elevforelder where idElev=?)')){
-                    $stmt->bind_param("i",$id);
-                    $id = $_GET['ElevId'];
-
-                    $stmt->execute();
-
-                    $stmt->bind_result($col1, $col2);
-
-
-                }
+            $sql = 'SELECT Namn,Efternamn from Forelder where ID=(SELECT idForelder from elevforelder where idElev=?);';
+            $id = $_GET['ElevId'];
+            $result = prepareArray($sql,array($id),array("i"),$mysqli);
         }
         echo "
 <table>
     <tr>
-    <td><h3>Förelder</h3></td>
+    <td><h3>Förälder</h3></td>
     </tr>";
-        //För varje förelder skriv ut Namn och efternamn (row 1 och row 2)
-        while($stmt->fetch()){
-            printf ('<tr><td> %s </td><td> %s</td></tr>', $col1, $col2);
-        }
+        //För varje förälder skriv ut Namn och efternamn (row 1 och row 2)
+        if($row = $result->fetch_array()) {
+            do {
+                echo "<tr><td> $row[0] </td><td> $row[1]</td></tr>";
+            } while ($row = $result->fetch_array());
+        }else{
+            echo "<tr><td></td><td> Eleven har inga inskrivna föreldrar </td><td>";
 
+        }
 
         echo "</td></tr>
 </table>";

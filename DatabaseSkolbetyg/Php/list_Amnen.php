@@ -2,7 +2,7 @@
 
 <?php
 include 'config.php';
-$sql = 'SELECT * from Amnen ORDER by Namn';
+$sql = 'SELECT * from Amne ORDER by namn';
 
 if($mysqli = connect_db()){
     $result = $mysqli->query($sql);
@@ -26,6 +26,7 @@ if($mysqli = connect_db()){
 
             <?php
             echo '<h2>Ämnen</h2>';
+
             while($row = $result->fetch_array()) {
                 echo "
                     <tr>

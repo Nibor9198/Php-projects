@@ -79,13 +79,29 @@ function getName($id, $idType, $table, $mysqli){
         $row = $result->fetch_array();
         return $row[0];
     }else{
-        return "Missing";
+        return "Missing name";
     }
 }
-function makeUpdateTable($result1,$row2){
+function makeUpdateTable($result1,$row2)
+{
     $result1->fetch_array();
-    for($i = 1; $i < count($row2)/2; $i++){
+    for ($i = 1; $i < count($row2) / 2; $i++) {
         $row1 = $result1->fetch_array();
-            echo '<tr><td>' . $row1[0] . '</td><td><input type="text" name="' . $row1[0] . '" value="' . $row2[$i] . '"></td></tr>';
+        echo '<tr><td>' . $row1[0] . '</td><td><input type="text" name="' . $row1[0] . '" value="' . $row2[$i] . '"></td></tr>';
     }
+}
+
+function createInsert($table, $how, $values){
+    $sql = "Insert into $table (";
+    foreach($how as $o){
+        if($how[0] !== $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ") values (";
+    foreach($values as $o){
+        if($values[0] != $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
 }

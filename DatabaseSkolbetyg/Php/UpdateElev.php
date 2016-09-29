@@ -2,11 +2,45 @@
 <?php
 include "config.php";
 $mysqli = connect_db();
-
+$mess = "";
 //Sql Describe Elev
 $sql = "Describe Elev;";
 $result = prepareArray($sql,array(),array(),$mysqli);
 $res = prepareArray($sql,array(),array(),$mysqli);
+
+//Om den har skickat saker att uppdatera
+if(isset($_POST['Sent'])){
+
+    $sql = "Update Elev set";
+    $res->fetch_array();
+    $count = true;
+    $p = array();
+
+    while($row = $res->fetch_array()){
+        if(!$count){$sql = $sql . ",";}else{$count = false;}
+        $i = $row[0];
+        $sql= $sql . " $i = ?";
+        array_push($p,$_POST[$i]);
+        //array_push($t,"s");
+
+    }
+
+
+    $sql = $sql . " where id= " . $_GET['ElevId'] . ";" ;
+
+    $result3 = $mysqli->prepare($sql);
+    $result3->bind_param("sss", $p[0],$p[1],$p[2]);
+    $result3->execute();
+    if ($result3->errno > 0){
+        $mess = "Error";
+    }else if($result3->affected_rows == 0){
+        $mess = "Nothing was changed.";
+    }else{
+        $mess= "Sucsessfull!";
+    }
+
+}
+
 
 //Sql Få ut info om eleven
 $sql = "Select * from Elev WHERE ID=?";
@@ -24,37 +58,6 @@ $name = getName($_GET['ElevId'],"i","Elev",$mysqli);
 
 
 
-if(isset($_POST['Sent'])){
-
-    $sql = "Update Elev set";
-    $res->fetch_array();
-    $count = true;
-    $p = array();
-    $t = array();
-    while($row = $res->fetch_array()){
-        if(!$count){$sql = $sql . ",";}else{$count = false;}
-        $i = $row[0];
-        $sql= $sql . " $i = ?";
-        array_push($p,$_POST[$i]);
-        array_push($t,"s");
-
-    }
-
-
-    $sql = $sql . " where id= " . $_GET['ElevId'] . ";" ;
-    $sql = "Update Elev set Namn = ?, Efternamn = ?, Klass = ? where id= 2;";
-    $res = prepareArray($sql,$p,$t,$mysqli);
-
-
-    echo'<html><head><link rel="stylesheet" href="style.css"></head><body>
-<div id="back"><a href="UpdateElev.php"><img src="img.png"></a></div>
-<div id="block">';
-    print_r($p);
-    print_r($t);
-    echo $sql;
-    echo'</div></body></html>';
-
- }else{
 
 
 echo'
@@ -68,17 +71,18 @@ echo'
 <div id="block">
 <form action="UpdateElev.php?ElevId='. $_GET['ElevId'] . '" method="Post">
 <h2>'. $name .'</h2>
+<h4>'. $mess .'</h4>
     <table class="inline" border="solid">';
         //while($row1 = $result1->fetch_array()){
 echo '<tr><td colspan="2"><a href="list_Foreldrar.php"><b>Elev</b></a></td></tr>';
         makeUpdateTable($result,$row);
 echo'<tr><td colspan="2"><input type="submit" value="Skicka" name="Sent"></td></tr></table>';
-echo'<table class="inline" border="solid"><tr><td colspan="2"><a href="list_Foreldrar.php"><b>Föreldrar</b></a></td></tr>';
+echo'<table class="inline" border="solid"><tr><td colspan="2"><a href="list_Foreldrar.php"><b>Föräldrar</b></a></td></tr>';
 
 while($row = $resF->fetch_array()){
     echo '<tr><td><a href="UpdateForelder.php?Id='. $row[0] .'">'. $row[1] . ' ' . $row[2] .'</a></td></tr>';
 }
-echo '<tr><td><a class="Btn green" href="">Ny Förelder</a></td></tr>';
+echo '<tr><td><a class="Btn green" href="">Ny Förälder</a></td></tr>';
 echo'</table>';
 
 echo'<table class="inline" border="solid"><tr><td colspan="2"><a href="list_Amnen.php"><b>Ämnen</b></a></td></tr>';
@@ -87,7 +91,7 @@ if(isset($resA)) {
         echo '<tr><td><a href="UpdateAmne.php?Id=' . $row[0] . '">' . $row[1] . '</a></td></tr>';
     }
 }else{
-    echo '<tr><td><a>'. $name .' går inga ämnen</a></td></tr>';
+    echo '<tr><td>'. $name .' går inga ämnen</td></tr>';
 }
 echo'</table>';
 
@@ -100,7 +104,7 @@ echo '
 
 
 
-}
+
 
 
 ?>

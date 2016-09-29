@@ -27,7 +27,7 @@ if($mysqli = connect_db()){
         <table border='solid'>
 
             <?php
-            echo '<h2>Elever</h2>';
+            echo "<h2>Elever</h2> <tr><td>Namn</td><td colspan='2'><a class='Btn green'>Ny Elev</a></td></tr>";
                 while($row = $result->fetch_array()) {
                     echo "
                     <tr>

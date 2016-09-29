@@ -1,0 +1,20 @@
+
+#indexblock{
+    width: 387px;
+    margin:auto;
+    margin-top: 200px;
+
+}
+body{
+    font-size: 200%;
+}
+
+a:hover{
+    color: rebeccapurple;
+    font-size: 120%;
+}
+
+a{
+    transition: color 0.5s, font-size 0.5s;
+
+}
