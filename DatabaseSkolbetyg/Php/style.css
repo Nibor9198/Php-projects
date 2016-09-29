@@ -1,0 +1,39 @@
+
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+body{
+    background-color: darkslategray;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
+.Btn{
+    display:block;
+    padding: 5px;
+    border-radius: 4pt;
+}
+.green{
+    background-color: lime;
+}
+.red{
+    background-color:#FF4136;
+}
+.inline{
+    display:inline-block;
+}
+a{
+    color:white;
+    text-decoration: none;
+    display:block;
+}
+#back{
+    position: absolute;
+    top:0px;
+    left:-15px;
+}
+#block{
+    margin-top: 100px;
+    margin-left: 150px;
+}
