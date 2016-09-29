@@ -53,7 +53,9 @@ function prepareArray ($sql, $params, $paramTypes, $mysqli)
     }
 
 }
-function prepareArrayMulti ($sql, $params, $paramTypes, $mysqli)
+
+//Gör färdigt!
+function prepareUpdate ($sql, $params, $paramTypes, $mysqli)
 {
 
     if ($stmt = $mysqli->prepare($sql)) {
