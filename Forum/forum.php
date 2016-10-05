@@ -16,11 +16,12 @@ else {
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a>Skapa ny tråd</a>
 <?php
 
 echo "<h1>Välkommen " . $_SESSION['name']."</h1>";
 
 ?>
 </body>
-</html>';
+</html>
 

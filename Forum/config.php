@@ -21,6 +21,13 @@ function connect_db() {
 
 	return $mysqli;
 }
+function getResult($sql){
+    if($mysqli = connect_db()){
+        $result = $mysqli->query($sql);
+        print_r($mysqli->error);
+        return $result;
+    }
+}
 
 function hasha($str) {
 	$hash = password_hash($str, PASSWORD_DEFAULT);
