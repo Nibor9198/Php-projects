@@ -16,7 +16,7 @@ else {
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a>Skapa ny tråd</a>
+<a href="NewThread.php">Skapa ny tråd</a>
 <?php
 
 echo "<h1>Välkommen " . $_SESSION['name']."</h1>";

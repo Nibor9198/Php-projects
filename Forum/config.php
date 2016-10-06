@@ -28,6 +28,20 @@ function getResult($sql){
         return $result;
     }
 }
+function createInsert($table, $values){
+    $sql = "Insert into $table";
+    //foreach($how as $o){
+    //    if($how[0] !== $o){$sql .= ",";}
+    //    $sql .= " $o";
+    //}
+    $sql .= ") values (";
+    foreach($values as $o){
+        if($values[0] != $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
+}
 
 function hasha($str) {
 	$hash = password_hash($str, PASSWORD_DEFAULT);
