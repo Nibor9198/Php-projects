@@ -21,6 +21,38 @@ function connect_db() {
 
 	return $mysqli;
 }
+function getResult($sql){
+    if($mysqli = connect_db()){
+        $result = $mysqli->query($sql);
+        print_r($mysqli->error);
+        return $result;
+    }
+}
+function createInsertold($table, $values){
+    $sql = "Insert into $table";
+    //foreach($how as $o){
+    //    if($how[0] !== $o){$sql .= ",";}
+    //    $sql .= " $o";
+    //}
+    $sql .= ") values (";
+    foreach($values as $o){
+        if($values[0] != $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
+}
+function createInsert($table, $values){
+    $sql = "Insert into $table";
+    $sql .= " values (";
+    foreach($values as $o){
+        if($values[0] != $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
+
+}
 
 function hasha($str) {
 	$hash = password_hash($str, PASSWORD_DEFAULT);
