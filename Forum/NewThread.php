@@ -9,6 +9,7 @@ $sql = "";
 $mysqli = connect_db();
 
 if(isset($_POST['title'])&& isset($_POST['content'])){
+    //Adding the thread to the database
     $sql = "Insert into thread values (0,?,?,".$_SESSION['id'].");";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("ss",$_POST['title'],$_POST['content']);
@@ -16,6 +17,13 @@ if(isset($_POST['title'])&& isset($_POST['content'])){
     $res = $stmt->get_result();
     printf($res);
 
+    //Getting the thread id
+    $sql = "Select max(thread.Id) from thread,user where user.Id = ". $_SESSION['id'];
+    $result = getResult($sql);
+    $row = $result->fetch_array();
+    $_SESSION['Thread'] = $row[0];
+
+    header("location:NewThreadCat.php");
 
 }else if(isset($_POST['title'])&& isset($_POST['content'])){
 

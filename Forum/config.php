@@ -28,7 +28,7 @@ function getResult($sql){
         return $result;
     }
 }
-function createInsert($table, $values){
+function createInsertold($table, $values){
     $sql = "Insert into $table";
     //foreach($how as $o){
     //    if($how[0] !== $o){$sql .= ",";}
@@ -41,6 +41,17 @@ function createInsert($table, $values){
     }
     $sql .= ");";
     return $sql;
+}
+function createInsert($table, $values){
+    $sql = "Insert into $table";
+    $sql .= " values (";
+    foreach($values as $o){
+        if($values[0] != $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
+
 }
 
 function hasha($str) {
