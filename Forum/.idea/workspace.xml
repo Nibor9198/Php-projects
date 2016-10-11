@@ -68,7 +68,7 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
+            <state relative-caret-position="731">
               <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
               <folding>
                 <marker date="1475749523515" expanded="true" signature="933:945" ph="Insert into ${$table}... " />
@@ -87,40 +87,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewThread.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewThread.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewThread.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
-                <marker date="1475750556108" expanded="true" signature="329:362" ph="Insert into thread... " />
-                <marker date="1475750556108" expanded="true" signature="329:382" ph="Insert into thread... " />
-                <marker date="1475750556108" expanded="true" signature="650:1109" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="650:1159" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="661:756" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="766:1109" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="783:1109" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="835:1109" ph="..." />
-                <marker date="1475750556108" expanded="true" signature="843:1107" ph="..." />
+                <marker date="1476188485528" expanded="true" signature="329:362" ph="Insert into thread... " />
+                <marker date="1476188485528" expanded="true" signature="329:382" ph="Insert into thread... " />
+                <marker date="1476188485528" expanded="true" signature="548:566" ph="Select max(I... thread" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewThreadCat.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewThreadCat.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewThreadCat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="37">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="e#6#96#0#PHP" expanded="true" />
-                <marker date="1475748882143" expanded="true" signature="443:560" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="443:688" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="443:777" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="443:795" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="443:881" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="443:904" ph="..." />
-                <marker date="1475748882143" expanded="true" signature="576:598" ph="Select * fro... category" />
+                <element signature="e#50#140#0#PHP" expanded="true" />
+                <marker date="1476188505033" expanded="true" signature="494:650" ph="..." />
+                <marker date="1476188505033" expanded="true" signature="533:650" ph="..." />
+                <marker date="1476188505033" expanded="true" signature="666:688" ph="Select * fro... category" />
               </folding>
             </state>
           </provider>
@@ -157,9 +147,9 @@
         <option value="$PROJECT_DIR$/template.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/forum.php" />
-        <option value="$PROJECT_DIR$/NewThreadCat.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/NewThread.php" />
+        <option value="$PROJECT_DIR$/NewThreadCat.php" />
       </list>
     </option>
   </component>
@@ -201,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,12 +213,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DatabaseSkolbetyg/Php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -289,12 +279,13 @@
       <updated>1475228967338</updated>
       <workItem from="1475228968813" duration="2478000" />
       <workItem from="1475662309366" duration="3301000" />
-      <workItem from="1475748095488" duration="2547000" />
+      <workItem from="1475748095488" duration="2616000" />
+      <workItem from="1476187875733" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8326000" />
+    <option name="totallyTimeSpent" value="9020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -331,10 +322,107 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loggaUt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skapaKonto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+          <folding>
+            <marker date="1475238165519" expanded="true" signature="327:360" ph="insert into user... " />
+            <marker date="1475238165519" expanded="true" signature="704:1049" ph="..." />
+            <marker date="1475238165519" expanded="true" signature="717:1037" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <marker date="1475749523515" expanded="true" signature="933:945" ph="Insert into ${$table}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewThread.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476188485528" expanded="true" signature="329:362" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="329:382" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="548:566" ph="Select max(I... thread" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewThreadCat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="e#50#140#0#PHP" expanded="true" />
+            <marker date="1476188505033" expanded="true" signature="494:650" ph="..." />
+            <marker date="1476188505033" expanded="true" signature="533:650" ph="..." />
+            <marker date="1476188505033" expanded="true" signature="666:688" ph="Select * fro... category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -402,15 +490,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1475750556108" expanded="true" signature="329:362" ph="Insert into thread... " />
-            <marker date="1475750556108" expanded="true" signature="329:382" ph="Insert into thread... " />
-            <marker date="1475750556108" expanded="true" signature="650:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="650:1159" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="661:756" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="766:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="783:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="835:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="843:1107" ph="..." />
+            <marker date="1476188485528" expanded="true" signature="329:362" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="329:382" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="548:566" ph="Select max(I... thread" />
           </folding>
         </state>
       </provider>
@@ -525,14 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -543,7 +617,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
+        <state relative-caret-position="731">
           <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
           <folding>
             <marker date="1475749523515" expanded="true" signature="933:945" ph="Insert into ${$table}... " />
@@ -563,37 +637,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewThreadCat.php">
+    <entry file="file://$PROJECT_DIR$/sql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#96#0#PHP" expanded="true" />
-            <marker date="1475748882143" expanded="true" signature="443:560" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="443:688" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="443:777" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="443:795" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="443:881" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="443:904" ph="..." />
-            <marker date="1475748882143" expanded="true" signature="576:598" ph="Select * fro... category" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewThread.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
-            <marker date="1475750556108" expanded="true" signature="329:362" ph="Insert into thread... " />
-            <marker date="1475750556108" expanded="true" signature="329:382" ph="Insert into thread... " />
-            <marker date="1475750556108" expanded="true" signature="650:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="650:1159" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="661:756" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="766:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="783:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="835:1109" ph="..." />
-            <marker date="1475750556108" expanded="true" signature="843:1107" ph="..." />
+            <marker date="1476188485528" expanded="true" signature="329:362" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="329:382" ph="Insert into thread... " />
+            <marker date="1476188485528" expanded="true" signature="548:566" ph="Select max(I... thread" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewThreadCat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#50#140#0#PHP" expanded="true" />
+            <marker date="1476188505033" expanded="true" signature="494:650" ph="..." />
+            <marker date="1476188505033" expanded="true" signature="533:650" ph="..." />
+            <marker date="1476188505033" expanded="true" signature="666:688" ph="Select * fro... category" />
           </folding>
         </state>
       </provider>

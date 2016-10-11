@@ -13,8 +13,8 @@ if(isset($_POST['title'])&& isset($_POST['content'])){
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("ss",$_POST['title'],$_POST['content']);
     $stmt->execute();
-    $res = $stmt->get_result();
-    printf($res);
+
+    header("location:NewThreadCat.php");
 
 
 }else if(isset($_POST['title'])&& isset($_POST['content'])){

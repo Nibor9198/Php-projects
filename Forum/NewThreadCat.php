@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
 <?php
 /**
  * Created by PhpStorm.
@@ -21,7 +25,7 @@ if (isset($_Get['NewCat'])){
 
 }else {
 
-    echo "<table class = 'inline' border='solid'>
+    echo "<form method='post' action='NewThreadCat.php'><table class = 'inline' border='solid'>
         <tr><td colspan='3'>Categorys</td></tr>
         <tr><td></td><td>Name</td><td>Description</td></tr>
         ";
@@ -31,7 +35,12 @@ if (isset($_Get['NewCat'])){
         echo "<tr><td><input type='checkbox' name='$row[0]'></td><td>$row[1]</td><td>$row[2]</td></tr>";
     }
     echo "<tr><td colspan='3'><a href='NewThreadCat.php?NewCat=true'>New Category</a></td></tr>";
+    echo "<tr><td colspan='3'><input type='submit'></td></tr>";
 
 
-    echo '</table>';
+    echo '</table></form>';
 }
+?>
+
+</body>
+</html>
