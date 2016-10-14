@@ -1,3 +1,16 @@
 td{
-    padding:5px;
+    padding: 5px;
+    text-align: center;
+
+
+}
+h4{
+    display:inline;
+}
+a{
+    display:block;
+}
+.text{
+
+    width:250px;
 }

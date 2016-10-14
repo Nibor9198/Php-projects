@@ -54,24 +54,6 @@ function prepareArray ($sql, $params, $paramTypes, $mysqli)
 
 }
 
-//Gör färdigt!
-function prepareUpdate ($sql, $params, $paramTypes, $mysqli)
-{
-
-    if ($stmt = $mysqli->prepare($sql)) {
-        if(isset($params)) {
-            $s ="";
-            for ($i = 0; $i < count($paramTypes); $i++) {
-                $s = $s . $s;
-            }
-            $stmt->bind_param($paramTypes[$i], $params[$i]);
-        }
-        $stmt->execute();
-
-        return $stmt->get_result();
-    }
-
-}
 function getName($id, $idType, $table, $mysqli){
     $sql = "Select namn from $table where Id=?;";
     $result = prepareArray($sql,array($id),array($idType),$mysqli);
@@ -92,6 +74,7 @@ function makeUpdateTable($result1,$row2)
 }
 
 function createInsert($table, $how, $values){
+
     $sql = "Insert into $table (";
     foreach($how as $o){
         if($how[0] !== $o){$sql .= ",";}
@@ -105,3 +88,23 @@ function createInsert($table, $how, $values){
     $sql .= ");";
     return $sql;
 }
+
+function prepareInsert($table, $how, $values){
+    $sql = "Insert into $table (";
+    foreach($how as $o){
+        if($how[0] !== $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+}
+function createDescribe($table, $mysqli){
+    $sql = "Describe $table;";
+    return prepareArray($sql,array(),array(), $mysqli);
+}
+function describeTable($table, $mysqli){
+    $result = createDescribe($table, $mysqli);
+    $result->fetch_array();
+    while($row = $result->fetch_array()){
+        echo "<tr><td>$row[0]</td><td><input type='text' name='$row[0]'></td></tr>";
+    }
+}
+

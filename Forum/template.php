@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['id']) && isset($_SESSION['uname']) && isset($_SESSION['name'])) {
 
-    //echo "<p><a href='loggaUt.php'>Logga ut</a></p>";
+    echo "<p><a href='loggaUt.php'>Logga ut</a></p>";
 }
 else {
     header("location:index.php");

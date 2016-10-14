@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 	// Definera en funktion som sköter uppkoppling till databasen
 function connect_db() { 
 
@@ -28,7 +27,7 @@ function getResult($sql){
         return $result;
     }
 }
-function createInsert($table, $values){
+function createInsertold($table, $values){
     $sql = "Insert into $table";
     //foreach($how as $o){
     //    if($how[0] !== $o){$sql .= ",";}
@@ -42,6 +41,17 @@ function createInsert($table, $values){
     $sql .= ");";
     return $sql;
 }
+function createInsert($table, $values){
+    $sql = "Insert into $table";
+    $sql .= " values (";
+    foreach($values as $o){
+        if($values[0] !== $o){$sql .= ",";}
+        $sql .= " $o";
+    }
+    $sql .= ");";
+    return $sql;
+
+}
 
 function hasha($str) {
 	$hash = password_hash($str, PASSWORD_DEFAULT);
@@ -50,6 +60,15 @@ function hasha($str) {
 
 function checkPasswd($pw,$p) {
 	return password_verify($pw, $p);
+}
+
+function prepareSql ($sql, $param, $paramType){
+    $mysqli = connect_db();
+    if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->bind_param($paramType, $param);
+        $stmt->execute();
+        return $stmt->get_result();
+    }
 }
 
 ?>

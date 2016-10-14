@@ -82,7 +82,7 @@ echo'<table class="inline" border="solid"><tr><td colspan="2"><a href="list_Fore
 while($row = $resF->fetch_array()){
     echo '<tr><td><a href="UpdateForelder.php?Id='. $row[0] .'">'. $row[1] . ' ' . $row[2] .'</a></td></tr>';
 }
-echo '<tr><td><a class="Btn green" href="">Ny Förälder</a></td></tr>';
+echo '<tr><td><a class="Btn green" href="CreateForelder.php?Id= ' . $_GET['ElevId'] .'" >Ny Förälder</a></td></tr>';
 echo'</table>';
 
 echo'<table class="inline" border="solid"><tr><td colspan="2"><a href="list_Amnen.php"><b>Ämnen</b></a></td></tr>';
