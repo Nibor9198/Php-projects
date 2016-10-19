@@ -18,7 +18,7 @@ if(!(isset($_SESSION['id']) && isset($_SESSION['uname']) && isset($_SESSION['nam
 include 'config.php';
 $sql = "";
 $mysqli = connect_db();
-
+ //Create Category
  if(isset($_GET['CCat']) && isset($_POST['Name']) && isset($_POST['Desc'])){
 
         //$sql = createInsert("category",array(0,$_POST['Name']),$_POST['Desc']);
@@ -30,7 +30,7 @@ $mysqli = connect_db();
 
      //$res = getResult($sql);
         header("location:NewThreadCat.php");
-
+    //New Category
 }else if (isset($_GET['NewCat']) || isset($_Get['CCat'])){
     echo "<table class = 'inline' border='solid'>
         <tr><td colspan='3'>Create category</td></tr>
